@@ -11,16 +11,18 @@
 <body>
 	<div class="container">
 		<div class="alert alert-primary mt-5" role="alert">
-			<div class="col-md-2">
-				<img src="{{url('/frontend/images/daehee.png')}}" alt="">
+			<div class="row">
+				<div class="col-md-2">
+					<img src="{{url('/frontend/images/daehee.png')}}" alt="">
+				</div>
+				<div class="col-md-10">
+					Thông báo!<br>
+					Kính thưa Quý khách hàng, hiện tại website của chúng tôi đang trong quá trình bảo trì.<br>
+					Ngày cập nhật dự kiến : 18/12/2022<br>
+					<br>
+					Cảm ơn Quý khách hàng đã luôn quan tâm và ủng hộ chúng tôi.
+				</div>
 			</div>
-			<div class="col-md-10">
-				Kính thưa Quý khách hàng, hiện tại website của chúng tôi đang trong quá trình bảo trì.<br>
-				Ngày cập nhật dự kiến : 18/12/2022<br>
-				<br>
-				Cảm ơn Quý khách hàng đã luôn quan tâm và ủng hộ chúng tôi.
-			</div>
-			Thông báo!<br>
 		</div>
 	</div>
 
