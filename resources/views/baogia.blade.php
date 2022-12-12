@@ -17,7 +17,7 @@
 				</div>
 				<div class="col-md-10">
 					Thông báo!<br>
-					Kính thưa Quý khách hàng, hiện tại website của chúng tôi đang trong quá trình bảo trì.<br>
+					Kính thưa Quý khách hàng, hiện tại website của chúng tôi đang trong quá trình nâng cấp, bảo trì.<br>
 					Ngày cập nhật dự kiến : 18/12/2022<br>
 					<br>
 					Cảm ơn Quý khách hàng đã luôn quan tâm và ủng hộ chúng tôi.
