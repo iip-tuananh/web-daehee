@@ -13,7 +13,7 @@
 		<div class="alert alert-primary mt-5" role="alert">
 			<div class="row">
 				<div class="col-md-2">
-					<img src="{{url('/frontend/images/daehee.png')}}" alt="">
+					<img src="{{url('/frontend/images/daehee.png')}}" alt="" style="width:100%">
 				</div>
 				<div class="col-md-10">
 					Thông báo!<br>
