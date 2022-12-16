@@ -96,7 +96,7 @@
                   />
                 </div>
                 <div class="form-group">
-                  <label>Link Shopee</label>
+                  <label>Google</label>
                   <vs-input
                     type="text"
                     size="default"

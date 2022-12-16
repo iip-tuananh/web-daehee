@@ -21,8 +21,8 @@ class ProductController extends Controller
     {
         $data['brands'] = ProductBrands::where('status', 1)->get();
         $data['list'] = Product::where(['status'=>1])->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug', 'size', 'description')
-        ->paginate(12);
-        $data['title'] = "Tất cả sản phẩm";
+        ->paginate(24);
+        $data['title'] = "Tất cả dự án";
         return view('product.list',$data);
     }
 
@@ -331,16 +331,18 @@ class ProductController extends Controller
         return view('product.search',$data);
     }
     
-    public function listComboPro(Request $request)
+    public function listCatePro(Request $request)
     {
         $id = $request->id;
-        $data['combo'] = ProductCombo::with([
-            'products'=>function($query) {
-                $query->where('status', 1)->select();
-            }
-        ])->where(['status'=> 1, 'id'=>$id])->first();
-        // dd($data['combo']);
-        $html = view('layouts.product.view-combo-product', $data)->render();
+        if ($id == 0) {
+            $data['list'] = Product::where(['status'=>1])->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug', 'size', 'description')
+            ->paginate(24);
+        } else {
+            $data['list'] = Product::where(['status'=>1, 'category'=>$id])->orderBy('id','DESC')->select('id','category','name','discount','price','images','slug','cate_slug','type_slug', 'size', 'description')
+            ->paginate(24);
+        }
+        
+        $html = view('product.list-cate-product', $data)->render();
         return response()->json([
             'status' => 200,
             'html' => $html,

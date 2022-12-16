@@ -9,143 +9,164 @@
 {{url(''.$detail_service->image)}}
 @endsection
 @section('css')
-<link href="{{asset('frontend/css/blog_article_style.scss.css')}}" rel="stylesheet" type="text/css" />
-<link href="{{asset('frontend/css/sidebar_style.scss.css')}}" rel="stylesheet" type="text/css" />
 @endsection
 @section('js')
 @endsection
 @section('content')
-<section class="bread-crumb" style="background-image: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,0.2) 100%), url({{$detail_service->image}});">
-	<span class="crumb-border"></span>
-	<div class="container">
-	<div class="rows">
-		<div class="col-xs-12 a-left">
-			<p class="title_h1 clearfix">
-				{{($detail_service->name)}}
-			</p>
-			<ul class="breadcrumb" >
-				<li class="home">
-				<a  href="{{route('home')}}" ><span >Trang chủ</span></a>						
-				<span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
-				</li>
-				<li >
-				<a  href="{{route('allListBlog')}}"><span >Chính sách phân phối</span></a>	
-				<span class="mr_lr">&nbsp;<i class="fa fa-angle-right"></i>&nbsp;</span>
-				</li>
-				<li><strong><span >{{($detail_service->name)}}</span></strong></li>
-			</ul>
+<main id="main" class="">
+	<div class="page-header-excerpt">
+	<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1899118318">
+		<div data-animate="fadeInUp">
+			<div class="img-inner dark" >
+				<img width="1200" height="342" src="https://deltagroup.vn/wp-content/uploads/2017/03/xde4.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="https://deltagroup.vn/wp-content/uploads/2017/03/xde4.jpg 1200w, https://deltagroup.vn/wp-content/uploads/2017/03/xde4-768x219.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px" />						
+			</div>
+		</div>
+		<style scope="scope">
+			#image_1899118318 {
+			width: 100%;
+			}
+		</style>
+	</div>
+	</div>
+	<div class="page-wrapper page-right-sidebar">
+	<div class="row">
+		<div id="content" class="large-9 left col col-divided" role="main">
+			<div class="page-inner">
+				<div class="related-posts clear" style="margin-top: 30px;">
+				<h1 style="font-weight: 300; color: #263846; font-size: 2.1em; float: left; margin: -18px 16px 20px 0; /* line-height: 1.6; */width: auto;">{{($detail_service->name)}}</h1>
+				<div class="stripe-line"></div>
+				</div>
+				{!!languageName($detail_service->content)!!}
+				<div class="related-posts clear" style="margin-top: 40px; margin-bottom: 20px;">
+				<h1 style="font-weight: 300; color: #263846; font-size: 2.1em; float: left; margin: -18px 16px 20px 0; /* line-height: 1.6; */width: auto;">Xem thêm <strong style="color: #027ec5;">các lĩnh vực khác</strong></h1>
+				<div class="stripe-line"></div>
+				</div>
+				<section class="section dark" id="section_696405211">
+				<div class="bg section-bg fill bg-fill  bg-loaded" >
+				</div>
+				<div class="section-content relative">
+					<div class="row"  id="row-1114815591">
+						@foreach ($services as $service)
+							@if ($service->id != $detail_service->id)
+								<div class="col small-12 large-12"  >
+									<div class="col-inner"  >
+									<div class="icon-box featured-box icon-box-left text-left"  >
+										<div class="icon-box-img" style="width: 107px">
+											<div class="icon">
+												<div class="icon-inner" >
+												<img width="400" height="400" src="{{$service->image}}" class="attachment-medium size-medium" alt="" loading="lazy" srcset="{{$service->image}} 400w, {{$service->image}} 75w" sizes="(max-width: 400px) 100vw, 400px" />					
+												</div>
+											</div>
+										</div>
+										<div class="icon-box-text last-reset">
+											<h3><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></h3>
+											<p>{!!languageName($service->description)!!}</p>
+										</div>
+									</div>
+									</div>
+								</div>
+							@endif
+						@endforeach
+					</div>
+				</div>
+				<style scope="scope">
+					#section_696405211 {
+					padding-top: 30px;
+					padding-bottom: 30px;
+					background-color: #162D61;
+					}
+				</style>
+				</section>
+			</div>
+		</div>
+		<div class="large-3 col">
+			<div id="secondary" class="widget-area " role="complementary">
+				<aside id="block_widget-3" class="widget block_widget">
+				<div class="slider-wrapper relative" id="slider-1352373194" >
+					<div class="slider slider-nav-circle slider-nav-large slider-nav-light slider-style-normal"
+						data-flickity-options='{
+						"cellAlign": "center",
+						"imagesLoaded": true,
+						"lazyLoad": 1,
+						"freeScroll": false,
+						"wrapAround": true,
+						"autoPlay": 6000,
+						"pauseAutoPlayOnHover" : true,
+						"prevNextButtons": false,
+						"contain" : true,
+						"adaptiveHeight" : true,
+						"dragThreshold" : 10,
+						"percentPosition": true,
+						"pageDots": false,
+						"rightToLeft": false,
+						"draggable": true,
+						"selectedAttraction": 0.1,
+						"parallax" : 0,
+						"friction": 0.6        }'
+						>
+						<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1058409493">
+							<div class="img-inner dark" >
+							<img width="480" height="361" src="{{url('frontend/images/56.png')}}" class="attachment-large size-large" alt="" loading="lazy" />						
+							</div>
+							<style scope="scope">
+							#image_1058409493 {
+							width: 100%;
+							}
+							</style>
+						</div>
+						<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_2127263472">
+							<div class="img-inner dark" >
+							<img width="480" height="361" src="{{url('frontend/images/R57I.png')}}" class="attachment-large size-large" alt="" loading="lazy" />						
+							</div>
+							<style scope="scope">
+							#image_2127263472 {
+							width: 100%;
+							}
+							</style>
+						</div>
+						<div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1926486446">
+							<div class="img-inner dark" >
+							<img width="480" height="361" src="{{url('frontend/images/TKK.png')}}" class="attachment-large size-large" alt="" loading="lazy" />						
+							</div>
+							<style scope="scope">
+							#image_1926486446 {
+							width: 100%;
+							}
+							</style>
+						</div>
+					</div>
+					<div class="loading-spin dark large centered"></div>
+					<style scope="scope">
+					</style>
+				</div>
+				</aside>
+				<aside id="tuyendung_widget-3" class="widget tuyendung_widget">
+				<span class="widget-title "><span>Dự án nổi bật</span></span>
+				<div class="is-divider small"></div>
+				<div class="tuyendung_widget_wrap">
+					<table class="table table-striped locnhoo">
+						<tbody>
+							@foreach ($hotProduct as $product)
+							<tr>
+							<td><i class="icon-angle-right" style=" margin-right: 10px; "></i><a href="{{route('detailProduct', ['cate'=>$product->cate_slug, 'slug'=>$product->slug])}}" title="{{languageName($product->name)}}"> {{languageName($product->name)}}</a></td>
+							</tr>
+							@endforeach
+						</tbody>
+					</table>
+				</div>
+				</aside>
+				<aside id="block_widget-2" class="widget block_widget">
+				<span class="widget-title "><span>Lĩnh vực hoạt động</span></span>
+				<div class="is-divider small"></div>
+				<ul class="menu-right">
+					@foreach ($servicehome as $service)
+					<li><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}"><span class="arrow"></span> {{$service->name}}</a></li>
+					@endforeach
+				</ul>
+				</aside>
+			</div>
 		</div>
 	</div>
 	</div>
-</section>
-<section class="blogpage clearfix">
-	<div class="container article-wraper" itemscope itemtype="https://schema.org/Article">
-	<div class="wrap_background_aside padding-top-0 margin-bottom-40 clearfix">
-		<article class="article-main">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-				<div class="article-details clearfix">
-					<h1 class="article-title clearfix">{{($detail_service->name)}}</h1>
-					<div class="post-date">
-						<span>{{date_format($detail_service->created_at,'d-m-Y')}}</span>
-					</div>
-					<div class="article-content clearfix">
-						<div class="rte">
-							{!!languageName($detail_service->content)!!}
-						</div>
-					</div>
-				</div>
-				<div class="section clearfix">
-					<div class="social-sharing clearfix">
-						<span>Chia sẻ bài viết:</span>
-						<!-- Go to www.addthis.com/dashboard to customize your tools -->
-						<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-58589c2252fc2da4"></script>
-						<div class="addthis_inline_share_toolbox"></div>
-					</div>
-				</div>
-				<div class="section bloglq clearfix">
-					<h2>
-						<a href="#" title="Tin liên quan">Chính sách khác</a>
-					</h2>
-					<div class="section owlnav_style1">
-						<div class="slickblog">
-							@foreach ($services as $service)
-							@if ($service->id != $detail_service->id)
-								<div class="item">
-								<div class="blogwp clearfix">
-									<a  class="image-blog clearfix" href="{{route('serviceDetail', ['slug'=>$service->slug])}}" title="{{$service->name}}">
-									<img class="lazyload" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAANSURBVBhXYzh8+PB/AAffA0nNPuCLAAAAAElFTkSuQmCC" data-src="{{$service->image}}"  alt="{{$service->name}}">
-									</a>
-									<div class="post-date clearfix"> 
-										{!!languageName($service->description)!!}
-									</div>
-									<h3>
-										<a href="{{route('serviceDetail', ['slug'=>$service->slug])}}" title="{{$service->name}}">{{$service->name}}</a>
-									</h3>
-								</div>
-								</div>
-							@endif
-							@endforeach
-						</div>
-					</div>
-				</div>
-				</div>
-			</div>
-		</article>
-	</div>
-	</div>
-</section>
-<style>
-	.post-date{
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 3; 
-	-webkit-box-orient: vertical;
-	}
-</style>
-<script>
-	$(document).ready(function ($) {
-		$('.slickblog').slick({
-			autoplay: true,
-			autoplaySpeed: 6000,
-			dots: false,
-			arrows: false,
-			infinite: false,
-			speed: 300,
-			slidesToShow: 4,
-			slidesToScroll: 4,
-			responsive: [
-				{
-					breakpoint: 1200,
-					settings: {
-						slidesToShow: 4,
-						slidesToScroll: 4
-					}
-				},
-				{
-					breakpoint: 1024,
-					settings: {
-						slidesToShow: 3,
-						slidesToScroll: 3
-					}
-				},
-				{
-					breakpoint: 991,
-					settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2
-					}
-				},
-				{
-					breakpoint: 767,
-					settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					}
-				}
-			]
-		});
-	});
-</script>
+</main>
 @endsection

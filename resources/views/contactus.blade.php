@@ -9,110 +9,72 @@ Liên hệ với chúng tôi
 {{url(''.$setting->logo)}}
 @endsection
 @section('css')
-<link rel="preload" as="style" type="text/css" href="{{asset('frontend/css/contacts.scss.css')}}" />
-<link href="{{asset('frontend/css/contacts.scss.css')}}" rel="stylesheet" type="text/css" />
 @endsection
 @section('js')
 @endsection
 @section('content')
-<section class="bread-crumb">
-	<div class="container">
-	<div class="row">
-		<div class="col-12 a-left">
-			<ul class="breadcrumb" >
-				<li class="home">
-				<a  href="{{route('home')}}" ><span >Trang chủ</span></a>						
-				<span class="mr_lr">&nbsp;/&nbsp;</span>
-				</li>
-				<li><strong ><span>Liên hệ</span></strong></li>
-			</ul>
+<main id="main" class="">
+	<div id="content" role="main" class="content-area">
+	<div class="banner has-hover" id="banner-1673961428">
+		<div class="banner-inner fill">
+			<div class="banner-bg fill" >
+				<div class="bg fill bg-fill "></div>
+			</div>
+			<div class="banner-layers container">
+				<div class="fill banner-link"></div>
+			</div>
 		</div>
+		<style scope="scope">
+			#banner-1673961428 {
+			padding-top: 273px;
+			}
+			#banner-1673961428 .bg.bg-loaded {
+			background-image: url(https://deltagroup.vn/wp-content/uploads/2020/07/IMG_9376-scaled-1.jpg);
+			}
+			#banner-1673961428 .bg {
+			background-position: 81% 52%;
+			}
+		</style>
 	</div>
-	</div>
-</section>
-<h1 class="d-none">Liên hệ</h1>
-<div class="page_contact page-contacts">
-	<div class="form_content lazy leave-your-message" data-src="{{url('frontend/images/bg_contact.jpg')}}">
-	<div class="container">
-		<div class="row">
-			<div class="col-lg-6 col-12 offset-lg-6">
-				<h3>Bạn cần hỗ trợ?</h3>
-				<p class="p-bottom">{{$setting->company}} rất hân hạnh được hỗ trợ bạn, hãy để lại thông tin cho chúng tôi nhé. Yêu cầu của bạn sẽ được xử lý và phản hồi trong thời gian sớm nhất.</p>
-				<form accept-charset="utf-8" action="{{route('search_result')}}" id="contact" method="post">
-					@csrf
-				<div class="row">
-					<div class="col-xl-6 col-sm-6 col-xs-12">
-						<fieldset class="form-group">
-							<label>Họ tên*</label>
-							<input placeholder="Tên đầy đủ" type="text" name="name" id="name" class="form-control  form-control-lg" required />
-						</fieldset>
-					</div>
-					<div class="col-xl-6 col-sm-6 col-xs-12">
-						<fieldset class="form-group">
-							<label>Số điện thoại *</label>
-							<input placeholder="Số điện thoại" type="number" name="phone" id="phone" class="form-control form-control-lg" required />
-						</fieldset>
-					</div>
-					<div class="col-xl-12 col-sm-12 col-xs-12">
-						<fieldset class="form-group">
-							<label>Email*</label>
-							<input placeholder="Địa chỉ email" type="email" name="email"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,63}$" data-validation-error-msg= "Email sai định dạng" id="email" class="form-control form-control-lg" required />
-						</fieldset>
-					</div>
-					<div class="col-sm-12 col-xs-12">
-						<label>Tin nhắn*</label>
-						<fieldset class="form-group">
-							<textarea placeholder="Đừng ngại hỏi về đơn hàng của bạn" name="mess" id="comment" class="form-control form-control-lg" rows="5"  data-validation="required" required></textarea>
-						</fieldset>
-						<fieldset class="form-group">
-							<button type="submit" class="btn btn-blues btn-style btn-style-active">Gửi</button>
-						</fieldset>
+	<div class="row"  id="row-1655900888">
+		<div class="col medium-6 small-12 large-6"  >
+			<div class="col-inner"  >
+				<div class="tabbed-content">
+				<ul class="nav nav-line-grow nav-normal nav-size-large nav-center">
+					<li class="tab active has-icon"><a href="#tab_trỤ-sỞ-hÀ-nỘi"><span>VĂN PHÒNG TRỤ SỞ</span></a></li>
+				</ul>
+				<div class="tab-panels">
+					<div class="panel active entry-content" id="tab_trỤ-sỞ-hÀ-nỘi">
+						{!!$setting->iframe_map!!}
 					</div>
 				</div>
+				</div>
+			</div>
+		</div>
+		<div class="col medium-6 small-12 large-6"  >
+			<div class="col-inner" style="margin:29px 0px 0px 0px;" >
+				<div role="form" class="wpcf7" id="wpcf7-f8263-p20-o1" lang="vi" dir="ltr">
+				<div class="screen-reader-response">
+					<p role="status" aria-live="polite" aria-atomic="true"></p>
+					<ul></ul>
+				</div>
+				<form action="{{route('postcontact')}}" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+					@csrf
+					<p><label><br />
+						<span class="wpcf7-form-control-wrap ten-435"><input type="text" name="name" value="" size="40" class="wpcf7-form-control wpcf7-text" aria-invalid="false" placeholder="Họ và tên" required/></span></label>
+					</p>
+					<p><label><span class="wpcf7-form-control-wrap your-email"><input type="email" name="email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email" required/></span> </label><br />
+						<label><span class="wpcf7-form-control-wrap tel-198"><input type="tel" name="phone" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-tel wpcf7-validates-as-tel" aria-invalid="false" placeholder="Số điện thoại" required/></span> </label><br />
+						<label><br />
+						<span class="wpcf7-form-control-wrap your-message"><textarea name="mess" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Nội dung" required></textarea></span> </label><br />
+					</p>
+					<p><input type="submit" value="Gửi đi" class="wpcf7-form-control wpcf7-submit" /></p>
+					<div class="wpcf7-response-output" aria-hidden="true"></div>
 				</form>
+				</div>
 			</div>
 		</div>
 	</div>
 	</div>
-	<div class="container contact page-contacts leave-your-message">
-	<div class="row">
-		<div class="col-lg-7 col-12">
-			<h3 class="hoa">{{$setting->company}}</h3>
-			<p class="p-bottom">{{$setting->webname}}</p>
-			<ul class="contact-page">
-				<li>
-				Địa chỉ: {{$setting->address1}}
-				</li>
-				@if ($setting->address2)
-				<li>
-				Địa chỉ 2: {{$setting->address2}}
-				</li>
-				@endif
-			</ul>
-		</div>
-		<div class="col-lg-5 col-12 contact_info_right">
-			<h3 class="hoa">Liên hệ với chúng tôi</h3>
-			<ul class="contact-page">
-				<li>
-				Email: <a href="mailto:{{$setting->email}}">{{$setting->email}}</a>
-				</li>
-				<li>
-				Hotline: <a class="fone" href="tel:{{$setting->phone1}}">{{$setting->phone1}}</a>
-				</li>
-				@if ($setting->phone2)
-				<li>
-				CSKH: <a class="fone" href="tel:{{$setting->phone2}}">{{$setting->phone2}}</a>
-				</li>
-				@endif
-				<li>
-				Thời gian làm việc: 8h - 21h (Thứ 2 - Thứ 7)
-				</li>
-				<li>
-				Fanpage: <a href="{{$setting->facebook}}" title="{{$setting->facebook}}">{{$setting->facebook}}</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-	</div>
-</div>
+</main>
 @endsection

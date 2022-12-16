@@ -1,0 +1,122 @@
+.tailieu_box:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.tailieu_box {
+    display: table;
+    width: 100%;
+    border-bottom: 1px solid #ececec;
+}
+.tailieu_box_infor {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 10px 0;
+}
+.tailieu_box_download {
+    display: table-cell;
+    vertical-align: middle;
+    width: 100px;
+    text-align: center;
+}
+.tailieu_box_download a {
+    background: #3c8dc5;
+    padding: 6px 15px 9px;
+    color: #fff;
+}
+.tailieu_box_download a:hover {
+    background: #f76200;
+    color: #fff;
+}
+.tailieu_title_date h3 {
+    font-size: 15px;
+    padding: 0;
+    margin: 0px;
+}
+div#tailieu-list .nav-pagination {
+    margin: 20px 0 0 0;
+}
+.tailieu_title_date span {
+    font-size: 12px;
+}
+.tailieu_title_date {
+    padding: 0 20px 0 40px;
+    background: url(../images/doc-icon.png) no-repeat left top;
+    background-size: 30px auto;
+    -moz-background-size: 30px auto;
+    -webkit-background-size: 30px auto;
+    line-height: 18px;
+    min-height: 40px;
+}
+.tailieu_title_date a {
+    color: #3c8dc5;
+}
+.tailieu_title_date a:hover {
+    color: #f76200;
+}
+.tl_search_table {
+    display: table;
+    vertical-align: middle;
+    width: 100%;
+}
+.tl_search_cell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+.tl_search_cell.tl_search_submit {
+    width: 135px;
+    text-align: right;
+}
+.tl_search_cell.tl_search_submit input {
+    margin-right: 0;
+    margin-left: 0;
+}
+.tailieu_title {
+    background-color: #3c8dc5;
+    color: #fff;
+    padding: 5px 10px;
+    margin: 0 0 10px 0;
+}
+.tailieu_title h1{
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+}
+div#tailieu_search form {
+    margin: 0;
+}
+@media (max-width: 500px){
+    .tl_search_cell {
+        display: block;
+    }
+    .tl_search_cell.tl_search_submit {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    }
+    .tl_search_table {
+        display: block;
+    }
+    .tl_search_cell.tl_search_submit input {
+        width: 100%;
+    }
+    /*.tailieu_box_infor {
+        display: block;
+        width: 100%;
+    }
+    .tailieu_box_download {
+        display: block;
+        width: 100%;
+        padding: 0 0 0 40px;
+        text-align: left;
+    }
+    .tailieu_box {
+        display: block;
+    }
+    .tailieu_box_download a {
+        display: inline-block;
+        margin: 0 0 10px 0;
+    }*/
+}

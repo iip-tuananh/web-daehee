@@ -6,7 +6,7 @@
           <div class="card">
             <div class="card-body">
               <h4 class="card-title" @click="listCate">Danh sách danh mục</h4>
-              <p class="card-description">Thêm mới hoặc sửa chửa danh mục sản phẩm</p>
+              <p class="card-description">Thêm mới hoặc sửa chửa danh mục dự án</p>
               <router-link class="nav-link" :to="{name:'add_category'}">
                 <vs-button type="gradient" style="float:right;">Thêm mới</vs-button>
               </router-link>

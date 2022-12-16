@@ -3,8 +3,8 @@
       <div class="col-md-12 grid-margin stretch-card">
         <div class="card">
           <div class="card-body">
-            <h4 class="card-title" >Danh sách sản phẩm</h4>
-            <p class="card-description">Thêm mới hoặc sửa sửa sản phẩm</p>
+            <h4 class="card-title" >Danh sách dự án</h4>
+            <p class="card-description">Thêm mới hoặc sửa sửa dự án</p>
 
             <router-link class="nav-link" :to="{name:'createProduct'}">
               <vs-button type="gradient" style="float:right;">Thêm mới</vs-button>
@@ -13,12 +13,12 @@
             <vs-input icon="search" placeholder="Search" v-model="keyword" @keyup="searchProduct()"/>
             <vs-table stripe :data="list" max-items="10" pagination>
               <template slot="thead">
-                <vs-th>Ảnh sản phẩm</vs-th>
-                <vs-th>Tên sản phẩm</vs-th>
+                <vs-th>Ảnh dự án</vs-th>
+                <vs-th>Tên dự án</vs-th>
                 <vs-th>Danh mục</vs-th>
-                <vs-th>Phân loại sản phẩm</vs-th>
-                <!-- <vs-th>Loại hình sản phẩm</vs-th> -->
-                <!-- <vs-th>Thương hiệu sản phẩm</vs-th> -->
+                <!-- <vs-th>Phân loại dự án</vs-th> -->
+                <!-- <vs-th>Loại hình dự án</vs-th> -->
+                <!-- <vs-th>Thương hiệu dự án</vs-th> -->
                 <vs-th>Hành động</vs-th>
               </template>
               <template slot-scope="{data}">
@@ -27,8 +27,8 @@
                   <vs-td>{{JSON.parse(tr.name)[0].content}}</vs-td>
                   <vs-td v-if="tr.cate != null">{{JSON.parse(tr.cate.name)[0].content}}</vs-td>
                   <vs-td v-if="tr.cate == null">-----</vs-td>
-                  <vs-td v-if="tr.type_cate != null">{{JSON.parse(tr.type_cate.name)[0].content}}</vs-td>
-                  <vs-td v-if="tr.type_cate == null">-----</vs-td>
+                  <!-- <vs-td v-if="tr.type_cate != null">{{JSON.parse(tr.type_cate.name)[0].content}}</vs-td>
+                  <vs-td v-if="tr.type_cate == null">-----</vs-td> -->
                   <!-- <vs-td v-if="tr.type_two != null">{{JSON.parse(tr.type_two.name)[0].content}}</vs-td>
                   <vs-td v-if="tr.type_two == null">-----</vs-td> -->
                   <!-- <vs-td v-if="tr.brand_id != null">{{tr.brand.name}}</vs-td>
@@ -109,7 +109,7 @@ export default {
         type:'confirm',
         color: 'danger',
         title: `Bạn có chắc chắn`,
-        text: 'Xóa sản phẩm này',
+        text: 'Xóa dự án này',
         accept:this.destroy
       })
     }

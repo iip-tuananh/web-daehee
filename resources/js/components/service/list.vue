@@ -4,7 +4,7 @@
         <div class="col-md-12 grid-margin stretch-card">
           <div class="card">
             <div class="card-body">
-              <h4 class="card-title" >Danh sách dịch vụ</h4>
+              <h4 class="card-title" >Danh sách lĩnh vực</h4>
               <router-link class="nav-link" :to="{name:'addService'}">
                 <vs-button type="gradient" style="float:right;">Thêm mới</vs-button>
               </router-link>
@@ -12,7 +12,7 @@
               <vs-table stripe :data="list" max-items="10" pagination>
                 <template slot="thead">
                   <vs-th>Ảnh</vs-th>
-                  <vs-th>Tên</vs-th>
+                  <vs-th>Tên lĩnh vực</vs-th>
                   <vs-th>Hành động</vs-th>
                 </template>
                 <template slot-scope="{data}">

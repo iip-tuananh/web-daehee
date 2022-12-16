@@ -36,10 +36,10 @@ Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function
     Route::get('dang-xuat.html','AuthController@logout')->name('logout')->middleware('CheckAuthClient::class');
 
     Route::get('trang-noi-dung/{slug}.html','PageContentController@detail')->name('pagecontent');
-    Route::get('dich-vu/{slug}.html','PageController@serviceDetail')->name('serviceDetail');
-    Route::get('tat-ca-dich-vu.html','PageController@listService')->name('listService');
+    Route::get('linh-vuc/{slug}.html','PageController@serviceDetail')->name('serviceDetail');
+    Route::get('tat-ca-linh-vuc.html','PageController@listService')->name('listService');
     Route::get('gioi-thieu.html','PageController@aboutUs')->name('aboutUs');  
-    Route::get('chinh-sach-ho-tro/{slug}.html','PageController@helpCus')->name('helpCus');  
+    Route::get('tuyen-dung.html','PageController@helpCus')->name('helpCus');  
     Route::get('cong-nghe.html','PageController@technology')->name('technology');   
     Route::get('lien-he.html','PageController@contact')->name('lienHe');
     Route::post('lien-he','PageController@postcontact')->name('postcontact');
@@ -78,12 +78,12 @@ Route::group(['namespace'=>'Client','middleware' => ['checkLanguage']], function
     Route::get('thuong-hieu/{slug}.html','ProductBrandController@listProductBrand')->name('listProductBrand');
     Route::get('san-pham-khuyen-mai.html','ProductController@listSale')->name('listSale');
     Route::get('tat-ca-thuong-hieu.html','ProductBrandController@allProductBrand')->name('allProductBrand');
-    Route::get('tat-ca-san-pham.html','ProductController@allProduct')->name('allProduct');
+    Route::get('tat-ca-du-an.html','ProductController@allProduct')->name('allProduct');
     Route::get('chi-tiet/{cate}/{slug}.html','ProductController@detail_product')->name('detailProduct');
     Route::get('{cate}.html','ProductController@allListCate')->name('allListProCate');
     Route::get('{cate}/{type}.html','ProductController@allListType')->name('allListProType');
     Route::get('{cate}/{typecate}/{typetwo}.html','ProductController@allListTypeTwo')->name('allListTypeTwo');
-    Route::post('combo-product','ProductController@listComboPro')->name('listComboPro');
+    Route::post('cate-product','ProductController@listCatePro')->name('listCatePro');
     Route::post('san-pham/filter','ProductController@filterProduct')->name('filterProduct');
 
 });

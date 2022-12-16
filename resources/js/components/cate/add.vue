@@ -5,7 +5,7 @@
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-md-3"><h4 class="card-title">Thêm mới danh mục sản phẩm</h4></div>
+                <div class="col-md-3"><h4 class="card-title">Thêm mới danh mục dự án</h4></div>
                 <div class="col-md-6"></div>
                 <div class="col-md-3">
                   </div>
@@ -27,7 +27,7 @@
                           v-if="index != 0"
                           type="text"
                           size="default"
-                          placeholder="Tên sản phẩm"
+                          placeholder="Tên dự án"
                           class="w-100 inputlang"
                           v-model="objData.name[index].content"
                         />

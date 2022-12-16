@@ -89,17 +89,17 @@ export default {
       objSidebar: [
         {
           icon: "mdi mdi-crosshairs-gps menu-icon",
-          name: "Quản lý sản phẩm",
+          name: "Quản lý dự án",
           route_name: "",
           sub: [
             {
-              name: "Danh mục sản phẩm",
+              name: "Danh mục dự án",
               path: "/product/category",
             },
-            {
-              name: "Phân loại sản phẩm",
-              path: "/product/type",
-            },
+            // {
+            //   name: "Phân loại sản phẩm",
+            //   path: "/product/type",
+            // },
             // {
             //   name: "Loại hình sản phẩm",
             //   path: "/product/typetwo",
@@ -113,35 +113,35 @@ export default {
             //   path: "/product-combo",
             // },
             {
-              name: "Danh sách sản phẩm",
+              name: "Danh sách dự án",
               path: "/product",
             },
           ],
         },
-        // {
-        //   icon: "mdi mdi-newspaper menu-icon",
-        //   name: "Chính sách phân phối",
-        //   route_name: "",
-        //   sub: [
-        //     {
-        //       name: "Danh sách",
-        //       path: "/service",
-        //     }
-        //   ],
-        // },
+        {
+          icon: "mdi mdi-newspaper menu-icon",
+          name: "Quản lý lĩnh vực",
+          route_name: "",
+          sub: [
+            {
+              name: "Danh sách",
+              path: "/service",
+            }
+          ],
+        },
         {
           icon: "mdi mdi-newspaper menu-icon",
           name: "Quản lý tin tức",
           route_name: "",
           sub: [
-            {
-              name: "Danh mục bài viết",
-              path: "/blog/category",
-            },
-            {
-              name: "Loại bài viết",
-              path: "/blog/type",
-            },
+            // {
+            //   name: "Danh mục bài viết",
+            //   path: "/blog/category",
+            // },
+            // {
+            //   name: "Loại bài viết",
+            //   path: "/blog/type",
+            // },
             {
               name: "Danh sách bài viết",
               path: "/blogs",
@@ -180,14 +180,14 @@ export default {
               name: "Quản lý banner",
               path: "/banner",
             },
-            {
-              name: "Banner quảng cáo",
-              path: "/bannerads",
-            },
             // {
-            //   name: "Quản lý đối tác",
-            //   path: "/partner",
+            //   name: "Banner quảng cáo",
+            //   path: "/bannerads",
             // },
+            {
+              name: "Quản lý đối tác",
+              path: "/partner",
+            },
             // {
             //   name: "Thư viện ảnh",
             //   path: "/prize",
@@ -206,25 +206,25 @@ export default {
             },
           ],
         },
-        {
-          icon: "mdi mdi-shopping-music menu-icon",
-          name: "Quản lý đơn hàng",
-          route_name: "",
-          sub: [
-            {
-              name: "Đơn hàng cần kiểm tra",
-              path: "/bill/draft",
-            },
-            {
-              name: "Đơn hàng đã thanh toán",
-              path: "/bill/paymented",
-            },
-            // {
-            //   name: "Đơn hàng chưa hoàn tất",
-            //   path: "/bill/Unpayment",
-            // },
-          ],
-        },
+        // {
+        //   icon: "mdi mdi-shopping-music menu-icon",
+        //   name: "Quản lý đơn hàng",
+        //   route_name: "",
+        //   sub: [
+        //     {
+        //       name: "Đơn hàng cần kiểm tra",
+        //       path: "/bill/draft",
+        //     },
+        //     {
+        //       name: "Đơn hàng đã thanh toán",
+        //       path: "/bill/paymented",
+        //     },
+        //     {
+        //       name: "Đơn hàng chưa hoàn tất",
+        //       path: "/bill/Unpayment",
+        //     },
+        //   ],
+        // },
         // {
         //   icon: "mdi mdi-shopping-music menu-icon",
         //   name: "Quản lý khuyến mãi",
@@ -247,17 +247,17 @@ export default {
             }
           ],
         },
-        {
-          icon: "mdi mdi-newspaper menu-icon",
-          name: "Quản lý Review",
-          route_name: "",
-          sub: [
-            {
-              name: "Danh sách dịch vụ",
-              path: "/reviewCus",
-            }
-          ],
-        },
+        // {
+        //   icon: "mdi mdi-newspaper menu-icon",
+        //   name: "Quản lý Review",
+        //   route_name: "",
+        //   sub: [
+        //     {
+        //       name: "Danh sách dịch vụ",
+        //       path: "/reviewCus",
+        //     }
+        //   ],
+        // },
       ],
     };
   },

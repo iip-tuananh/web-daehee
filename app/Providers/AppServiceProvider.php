@@ -81,9 +81,8 @@ class AppServiceProvider extends ServiceProvider
             $hotBlogs = Blog::where([
                 'status'=>1, 'home_status'=>1
             ])->orderBy('id','DESC')->get(['id','title','slug','image','description']);
-            $hotProduct = Product::where(['status'=>1, 'discountStatus'=>1])->limit(8)->get(['id', 'name', 'cate_slug', 'slug', 'price', 'images']);
-            $helpCustomer = PageContent::where(['status'=>1,'language'=>'vi', 'type'=>'ho-tro-khach-hang'])->get();
-            $aboutUs = PageContent::where(['status'=>1,'language'=>'vi', 'type'=>'ve-chung-toi'])->get();
+            $hotProduct = Product::where(['status'=>1, 'discountStatus'=>1])->limit(8)->get(['id', 'name', 'cate_slug', 'slug']);
+            $helpCustomer = PageContent::where(['status'=>1,'language'=>'vi', 'type'=>'ho-tro-khach-hang'])->first();
             $partners = Partner::where(['status'=>1])->get(['id','image','name','link']);
             $view->with([
                 'promotio' => $promotio,
@@ -102,7 +101,6 @@ class AppServiceProvider extends ServiceProvider
                 'productBrands'=>$productBrands,
                 'helpCustomer'=>$helpCustomer,
                 'bannerAds'=>$bannerAds,
-                'aboutUs'=>$aboutUs,
                 'partners'=>$partners
                 ]);    
         });  

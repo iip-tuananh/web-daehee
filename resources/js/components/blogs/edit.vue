@@ -5,7 +5,7 @@
           <div class="card">
             <div class="card-body">
               <div class="form-group">
-                <label>Tên tin tức</label>
+                <label>Tiêu đề tin tức</label>
                 <vs-input
                   type="text"
                   size="default"
@@ -81,7 +81,7 @@
                       <vs-select-item  value="0" text="Ẩn" />
                     </vs-select>
               </div>
-              <div class="form-group">
+              <!-- <div class="form-group">
                 <label>Danh muc</label>
                 <vs-select class="selectExample" v-model="objData.category" placeholder="Danh mục" @change="findCategoryType()">
                    <vs-select-item
@@ -96,7 +96,7 @@
                   />
                 </vs-select>
                 
-              </div>
+              </div> -->
               <!-- <div class="form-group">
                 <label>Loại danh mục</label>
                 <vs-select class="selectExample"
@@ -206,11 +206,11 @@ export default {
     ...mapActions(["addBlog", "loadings","listCateBlog","detailBlog","listLanguage","listTypelog","findTypeCateBlog","listCate"]),
     addBlogs(){
       this.errors = [];
-      if(this.objData.title[0].content == '') this.errors.push('Tên không được để trống');
+      if(this.objData.title[0].content == '') this.errors.push('Tiêu đề không được để trống');
       if(this.objData.content[0].content == '') this.errors.push('Nội dung không được để trống');
       if(this.objData.description[0].content == '') this.errors.push('Mô tả không được để trống');
       if(this.objData.images == '') this.errors.push('Vui lòng chọn ảnh');
-      if(this.objData.category == '') this.errors.push('Chọn danh mục sản phẩm');
+      // if(this.objData.category == '') this.errors.push('Chọn danh mục sản phẩm');
       if (this.errors.length > 0) {
         this.errors.forEach((value, key) => {
           this.$error(value)
@@ -221,10 +221,10 @@ export default {
         this.addBlog(this.objData).then(response => {
           this.loadings(false);
           this.$router.push({name:'listBlogs'});
-          this.$success('Thêm tin tức thành công');
+          this.$success('Cập nhật tin tức thành công');
         }).catch(error => {
           this.loadings(false);
-          this.$error('Thêm tin tức thất bại');
+          this.$error('Cập nhật tin tức thất bại');
         })
       }
     },

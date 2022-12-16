@@ -6,7 +6,7 @@
             <div class="card-body">
               
               <div class="form-group">
-                <label>Tên dịch vụ</label>
+                <label>Tên lĩnh vực</label>
                 <vs-input
                   type="text"
                   size="default"
@@ -123,11 +123,10 @@ export default {
     ...mapActions(["addService", "loadings","detailService","listLanguage"]),
     addServices(){
       this.errors = [];
-      if(this.objData.name[0].content == '') this.errors.push('Tên không được để trống');
+      if(this.objData.name == '') this.errors.push('Tên lĩnh vực không được để trống');
       if(this.objData.content[0].content == '') this.errors.push('Nội dung không được để trống');
       if(this.objData.description[0].content == '') this.errors.push('Mô tả không được để trống');
-      if(this.objData.images == '') this.errors.push('Vui lòng chọn ảnh');
-      if(this.objData.category == '') this.errors.push('Chọn danh mục sản phẩm');
+      if(this.objData.image == '') this.errors.push('Vui lòng chọn ảnh');
       if (this.errors.length > 0) {
         this.errors.forEach((value, key) => {
           this.$error(value)
@@ -138,10 +137,10 @@ export default {
         this.addService(this.objData).then(response => {
           this.loadings(false);
           this.$router.push({name:'listService'});
-          this.$success('Thêm tin tức thành công');
+          this.$success('Cập nhật lĩnh vực thành công');
         }).catch(error => {
           this.loadings(false);
-          this.$error('Thêm tin tức thất bại');
+          this.$error('Cập nhật lĩnh vực thất bại');
         })
       }
     },

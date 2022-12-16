@@ -49,7 +49,7 @@ class BlogController extends Controller
         $data['blogs'] = Blog::where(['status'=>1,'type_cate'=>$slug])
         ->orderBy('id','DESC')
         ->select(['id','title','image','description','created_at','slug'])
-        ->paginate(9);
+        ->paginate(12);
         $data['cate'] = BlogTypeCate::where('slug', $slug)->first(['name']);
         $data['title_page'] = languageName($data['cate']->name);
         return view('blog.list',$data);
@@ -60,7 +60,7 @@ class BlogController extends Controller
         $data['blogs'] = Blog::where(['status'=>1, 'category'=>$data['blog_detail']->category])
         ->orderBy('id','DESC')
         ->select(['id','title','image','description','created_at','slug'])
-        ->paginate(9);
+        ->paginate(12);
         $data['news'] = Blog::where(['status'=>1, 'home_status'=>1])->orderBy('id', 'desc')->limit(10)->get(['id', 'title', 'slug', 'image']);
         $data['discountPro'] = Product::where('status', 1)->where('discount', '>', 0)->limit(5)->get(['id', 'name', 'price', 'discount', 'images', 'cate_slug', 'type_slug', 'slug']);
         return view('blog.detail',$data);

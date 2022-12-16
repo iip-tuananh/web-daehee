@@ -6,7 +6,7 @@
           <div class="card-body">
             
             <div class="form-group">
-              <label>Tên dịch vụ</label>
+              <label>Tên lĩnh vực</label>
               <vs-input
                 type="text"
                 size="default"
@@ -179,7 +179,7 @@ export default {
     addServices() {
       this.errors = [];
       if (this.objData.name == "")
-        this.errors.push("Liên kết không được để trống");
+        this.errors.push("Tên lĩnh vực không được để trống");
       if (this.objData.image == "") this.errors.push("Vui lòng chọn ảnh");
       if (this.errors.length > 0) {
         this.errors.forEach((value, key) => {
@@ -192,11 +192,11 @@ export default {
           .then((response) => {
             this.loadings(false);
             this.$router.push({ name: "listService" });
-            this.$success("Thêm banner thành công");
+            this.$success("Thêm lĩnh vực thành công");
           })
           .catch((error) => {
             this.loadings(false);
-            this.$error("Thêm banner thất bại");
+            this.$error("Thêm lĩnh vực thất bại");
           });
       }
     }

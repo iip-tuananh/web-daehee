@@ -147,7 +147,7 @@ class PageController extends Controller
 
     public function listService()
     {
-        $data['title_page'] = 'Tất cả dịch vụ';
+        $data['title_page'] = 'Tất cả lĩnh vực';
         $data['services'] = Services::where(['status'=>1])->select()->paginate(12);
         $data['news'] = Blog::where(['status'=>1])->orderBy('id', 'desc')->limit(5)->get(['id', 'title', 'slug', 'image']);
         $data['discountPro'] = Product::where('status', 1)->where('discount', '>', 0)->limit(5)->get(['id', 'name', 'price', 'discount', 'images', 'cate_slug', 'type_slug', 'slug']);
@@ -164,9 +164,9 @@ class PageController extends Controller
         return view('service.detail',$data);
     }
 
-    public function helpCus($slug)
+    public function helpCus()
     {
-        $data['helpCus'] = PageContent::where(['status'=>1, 'language'=>'vi', 'type'=>'ho-tro-khach-hang', 'slug'=>$slug])->first();
+        $data['helpCus'] = PageContent::where(['status'=>1, 'language'=>'vi', 'type'=>'ho-tro-khach-hang'])->first();
         return view('helpCus', $data);
     }
 }

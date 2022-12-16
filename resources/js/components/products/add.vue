@@ -5,11 +5,11 @@
           <div class="card">
             <div class="card-body">
               <div class="form-group">
-                <label>Tên sản phẩm</label>
+                <label>Tên dự án</label>
                 <vs-input
                   type="text"
                   size="default"
-                  placeholder="Tên sản phẩm"
+                  placeholder="Tên dự án"
                   class="w-100"
                   v-model="objData.name[0].content"
                 />
@@ -27,7 +27,7 @@
                       v-if="index != 0"
                       type="text"
                       size="default"
-                      placeholder="Tên sản phẩm"
+                      placeholder="Tên dự án"
                       class="w-100 inputlang"
                       v-model="objData.name[index].content"
                     />
@@ -35,11 +35,11 @@
                 </div>
               </div>
               <!-- <div class="form-group">
-                <label>Mã sản phẩm</label>
+                <label>Mã dự án</label>
                 <vs-input
                   type="text"
                   size="default"
-                  placeholder="Kí hiệu sản phẩm"
+                  placeholder="Kí hiệu dự án"
                   class="w-100"
                   v-model="objData.sku"
                 />
@@ -71,11 +71,11 @@
                 </div>
               </div>
               <div class="form-group">
-                <label>Ảnh sản phẩm</label>
+                <label>Ảnh dự án</label>
                 <ImageMulti v-model="objData.images" :title="'san-pham'"/> 
               </div>
-              <div class="form-group">
-                <label>Giá Sản phẩm</label>
+              <!-- <div class="form-group">
+                <label>Giá dự án</label>
                 <vs-input
                   type="number"
                   size="default"
@@ -93,7 +93,7 @@
                   class="w-100"
                   v-model="objData.discount"
                 />
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
@@ -103,12 +103,12 @@
               <div class="form-group">
                 <label>Trạng thái</label>
                 <vs-select v-model="objData.status">
-                  <vs-select-item value="1" text="Còn hàng" />
-                  <vs-select-item value="0" text="Hết hàng" />
+                  <vs-select-item value="1" text="Hiện" />
+                  <vs-select-item value="0" text="Ẩn" />
                 </vs-select>
               </div>
               <div class="form-group">
-                <label>Danh mục sản phẩm</label>
+                <label>Danh mục dự án</label>
                 <vs-select
                   class="selectExample"
                   v-model="objData.category"
@@ -127,8 +127,8 @@
                   />
                 </vs-select>
               </div>
-              <div class="form-group">
-                <label>Phân loại sản phẩm</label>
+              <!-- <div class="form-group">
+                <label>Phân loại dự án</label>
                 <vs-select
                   class="selectExample"
                   v-model="objData.type_cate"
@@ -143,9 +143,9 @@
                     :key="'v' + index"
                   />
                 </vs-select>
-              </div>
+              </div> -->
               <!-- <div class="form-group">
-                <label>Loại hình sản phẩm</label>
+                <label>Loại hình dự án</label>
                 <vs-select
                   class="selectExample"
                   v-model="objData.type_two"
@@ -161,7 +161,7 @@
                 </vs-select>
               </div> -->
               <!-- <div class="form-group">
-                <label>Thương hiệu sản phẩm</label>
+                <label>Thương hiệu dự án</label>
                 <vs-select
                   class="selectExample"
                   v-model="objData.brand_id"
@@ -177,7 +177,7 @@
                 </vs-select>
               </div> -->
               <!-- <div class="form-group">
-                <label>Thuộc combo sản phẩm</label>
+                <label>Thuộc combo dự án</label>
                 <vs-select
                   class="selectExample"
                   v-model="objData.combo_id"
@@ -193,7 +193,7 @@
                 </vs-select>
               </div> -->
               <!-- <div class="form-group">
-                <label>Màu sắc sản phẩm</label>
+                <label>Màu sắc dự án</label>
                 <div v-for="(item, index) in objData.size" :key="index">
                   <div class="row">
                     <div class="col-10">
@@ -228,7 +228,7 @@
                 >
               </div>
               <div class="form-group">
-                <label>Tạo size sản phẩm</label>
+                <label>Tạo size dự án</label>
                 <div v-for="(item, i) in objData.preserve" :key="i">
                   <div class="row">
                     <div class="col-10">
@@ -258,7 +258,7 @@
                 >
               </div> -->
               <div class="form-group">
-                <label>Sản phẩm nổi bật</label>
+                <label>Dự án nổi bật</label>
                 <vs-select v-model="objData.discountStatus">
                   <vs-select-item value="1" text="Có" />
                   <vs-select-item value="0" text="Không" />
@@ -383,7 +383,7 @@ export default {
       if(this.objData.content[0].content == '') this.errors.push('Nội dung không được để trống');
       if(this.objData.description[0].content == '') this.errors.push('Mô tả không được để trống');
       if(this.objData.images.length == 0) this.errors.push('Vui lòng chọn ảnh');
-      if(this.objData.category == 0) this.errors.push('Chọn danh mục sản phẩm');
+      if(this.objData.category == 0) this.errors.push('Chọn danh mục dự án');
       if (this.errors.length > 0) {
         this.errors.forEach((value, key) => {
           this.$error(value);
@@ -396,7 +396,7 @@ export default {
           .then((response) => {
             this.loadings(false);
             this.$router.push({ name: "listProduct" });
-            this.$success("Thêm sản phẩm thành công");
+            this.$success("Thêm dự án thành công");
             this.$route.push({ name: "listProduct" });
           })
           .catch((error) => {

@@ -12,7 +12,7 @@
               <vs-table stripe :data="list" max-items="10" pagination>
                 <template slot="thead">
                   <vs-th>Tiêu đề</vs-th>
-                  <vs-th>Danh mục</vs-th>
+                  <!-- <vs-th>Danh mục</vs-th> -->
                   <!-- <vs-th>Danh mục con</vs-th>
                   <vs-th>Loại</vs-th> -->
                   <vs-th>Hành động</vs-th>
@@ -20,8 +20,8 @@
                 <template slot-scope="{data}">
                   <vs-tr :key="indextr" v-for="(tr, indextr) in data">
                     <vs-td >{{JSON.parse(tr.title)[0].content}}</vs-td>
-                    <vs-td v-if="tr.cate != null">{{JSON.parse(tr.cate.name)[0].content}}</vs-td>
-                    <vs-td v-if="tr.cate == null">-----</vs-td>
+                    <!-- <vs-td v-if="tr.cate != null">{{JSON.parse(tr.cate.name)[0].content}}</vs-td>
+                    <vs-td v-if="tr.cate == null">-----</vs-td> -->
                     <!-- <vs-td v-if="tr.type_cate != null">{{JSON.parse(tr.type_cate.name)[0].content}}</vs-td>
                     <vs-td v-if="tr.type_cate == null">-----</vs-td> -->
                     <!-- <vs-td v-if="tr.type_news == 'tin-hot'">Tin Hot</vs-td>
