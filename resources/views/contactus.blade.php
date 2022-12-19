@@ -29,7 +29,7 @@ Liên hệ với chúng tôi
 			padding-top: 273px;
 			}
 			#banner-1673961428 .bg.bg-loaded {
-			background-image: url(https://deltagroup.vn/wp-content/uploads/2020/07/IMG_9376-scaled-1.jpg);
+			background-image: url({{url('frontend/images/bg-contact.jpg')}});
 			}
 			#banner-1673961428 .bg {
 			background-position: 81% 52%;
