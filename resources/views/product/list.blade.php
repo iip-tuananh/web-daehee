@@ -55,7 +55,7 @@ Danh sách {{$title}}
       </div>
       <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_1580028901">
          <div class="img-inner dark" >
-            <img width="1200" height="342" src="https://deltagroup.vn/wp-content/uploads/2017/03/det-1.jpg" class="attachment-large size-large" alt="" loading="lazy" srcset="https://deltagroup.vn/wp-content/uploads/2017/03/det-1.jpg 1200w, https://deltagroup.vn/wp-content/uploads/2017/03/det-1-768x219.jpg 768w" sizes="(max-width: 1200px) 100vw, 1200px" />						
+            <img width="1200" height="342" src="{{url('frontend/images/bg-duan.jpg')}}" class="attachment-large size-large" alt="" loading="lazy" srcset="{{url('frontend/images/bg-duan.jpg')}} 1200w, {{url('frontend/images/bg-duan.jpg')}} 768w" sizes="(max-width: 1200px) 100vw, 1200px" />						
          </div>
          <style scope="scope">
             #image_1580028901 {
