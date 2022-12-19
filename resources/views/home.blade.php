@@ -509,7 +509,7 @@
          background-color: rgba(22, 22, 22, 0.87);
          }
          #section_1516049535 .section-bg.bg-loaded {
-         background-image: url(https://deltagroup.vn/wp-content/uploads/2020/07/18216686_1417437778321522_1758129339191944561_o-1-1.jpg);
+         background-image: url({{url('frontend/images/bg-home-aboutus.jpg')}});
          }
          #section_1516049535 .section-bg {
          background-position: 79% 78%;
@@ -779,7 +779,7 @@
          padding-top: 326px;
          }
          #banner-819433840 .bg.bg-loaded {
-         background-image: url(https://deltagroup.vn/wp-content/uploads/2020/07/DJI_0952-1-2-1.jpg);
+         background-image: url({{url('frontend/images/bg-footer.jpg')}});
          }
          #banner-819433840 .overlay {
             background-color: rgb(0 0 0 / 64%);
