@@ -75,7 +75,7 @@ Giới thiệu về {{$setting->company}}
                      background-color: rgb(0 0 0 / 64%);
                   }
                   #section_164547122 .section-bg.bg-loaded {
-                  background-image: url({{url('frontend/images/bg-contact.jpg')}});
+                  background-image: url({{url('frontend/images/bg-aboutus.jpg')}});
                   }
                   #section_164547122 .section-bg {
                   background-position: 49% 8%;

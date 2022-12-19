@@ -349,7 +349,7 @@
                                              padding-top: 500px;
                                              }
                                              #banner-420440000 .bg.bg-loaded {
-                                             background-image: url($img[0]);
+                                             background-image: url({{$img[0]}});
                                              }
                                              #banner-420440000 .overlay {
                                              background-color: rgba(0, 0, 0, 0.34);
