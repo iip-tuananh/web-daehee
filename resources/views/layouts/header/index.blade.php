@@ -29,16 +29,15 @@
          <div class="flex-col hide-for-medium flex-right">
                <ul class="header-nav header-nav-main nav nav-right  nav-divided nav-size-medium nav-spacing-large nav-uppercase">
                   <li id="menu-item-28" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-28 active"><a href="{{route('home')}}" aria-current="page" class="nav-top-link">Trang chủ</a></li>
-                  {{-- <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27 has-dropdown">
-                     <a href="https://deltagroup.vn/gioi-thieu/" class="nav-top-link">Giới thiệu<i class="icon-angle-down" ></i></a>
-                     <ul class="sub-menu nav-dropdown nav-dropdown-default">
-                     <li id="menu-item-3084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="https://deltagroup.vn/lich-su/">Lịch sử</a></li>
-                     <li id="menu-item-3083" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3083"><a href="https://deltagroup.vn/doi-ngu-lanh-dao/">Đội ngũ lãnh đạo</a></li>
-                     </ul>
-                  </li> --}}
                   <li id="menu-item-1417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1417"><a href="{{route('aboutUs')}}" class="nav-top-link">Giới thiệu</a></li>
-                  
-                  <li id="menu-item-1417" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1417"><a href="{{route('listService')}}" class="nav-top-link">Lĩnh vực</a></li>
+                  <li id="menu-item-27" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27 has-dropdown">
+                     <a href="{{route('listService')}}" class="nav-top-link">Lĩnh vực<i class="icon-angle-down" ></i></a>
+                     <ul class="sub-menu nav-dropdown nav-dropdown-default">
+                        @foreach ($servicehome as $service)
+                        <li id="menu-item-3084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></li>
+                        @endforeach
+                     </ul>
+                  </li>
                   <li id="menu-item-25" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="{{route('allProduct')}}" class="nav-top-link">Dự án</a></li>
                   <li id="menu-item-7782" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7782"><a href="{{route('allListBlog')}}" class="nav-top-link">Tin tức</a></li>
                   <li id="menu-item-9337" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9337"><a href="{{route('helpCus')}}" class="nav-top-link">Tuyển dụng</a></li>
@@ -108,15 +107,15 @@
                </div>
             </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-28"><a href="{{route('home')}}" aria-current="page">Trang chủ</a></li>
-            {{-- <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27">
-               <a href="https://deltagroup.vn/gioi-thieu/">Giới thiệu</a>
-               <ul class="sub-menu nav-sidebar-ul children">
-               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="https://deltagroup.vn/lich-su/">Lịch sử</a></li>
-               <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3083"><a href="https://deltagroup.vn/doi-ngu-lanh-dao/">Đội ngũ lãnh đạo</a></li>
-               </ul>
-            </li> --}}
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1417"><a href="{{route('aboutUs')}}">Giới thiệu</a></li>
-            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1417"><a href="{{route('listService')}}">Lĩnh vực</a></li>
+            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-27">
+               <a href="{{route('listService')}}">Lĩnh vực</a>
+               <ul class="sub-menu nav-sidebar-ul children">
+                  @foreach ($servicehome as $service)
+                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></li>
+                  @endforeach
+               </ul>
+            </li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-25"><a href="{{route('allProduct')}}">Dự án</a></li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-7782"><a href="{{route('allListBlog')}}">Tin tức</a></li>
             <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9337"><a href="{{route('helpCus')}}">Tuyển dụng</a></li>

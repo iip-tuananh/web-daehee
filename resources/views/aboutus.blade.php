@@ -41,12 +41,7 @@ Giới thiệu về {{$setting->company}}
                   <div class="row row-full-width align-center"  id="row-920679219">
                      <div class="col medium-10 small-12 large-6"  data-animate="fadeInDown">
                         <div class="col-inner text-center"  >
-                           </p>
-                           <h1><i style="color: #62a438; font-family: 'Russo One', sans-serif;position: relative;font-size: 200%;"><span style="color: #ec1d26">Dae</span><span>hee</span><span style="border-bottom-style:solid; border-radius: 50% 40%;
-                              font-size: 10px;
-                              padding: 0px 7px;
-                              position: absolute;
-                              right: -30px;top:0">R</span></i></h1>
+                           <img src="{{url('frontend/images/daehee-02.png')}}" alt="logo">
                            <p>Nguồn nhân lực là giá trị cốt lõi và là nền tảng vững chắc<br />giúp DAEHEE không ngừng tạo nên những giá trị gia tăng hiệu quả cho khách hàng.</p>
                            <p>
                            <div id="gap-1664761282" class="gap-element clearfix" style="display:block; height:auto;">

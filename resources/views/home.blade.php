@@ -55,13 +55,13 @@
                <div class="col small-12 large-12"  >
                   <div class="col-inner"  >
                      <h3 style="text-align: center; text-transform:uppercase;"><span style="font-size: 160%;">Lĩnh vực hoạt động </span></h3>
-                     <p style="text-align: center;">Công trình của công ty thực hiện trên khắp cả nước luôn là những công trình nổi bật, phức tạp, đòi hỏi công nghệ xây dựng cập nhật nhất hiện nay.</p>
+                     <p style="text-align: center;">Công ty hướng đến là một công ty hoạt động đa ngành nghề và chuyên sâu. Nhằm hướng đến phát triển một hệ sinh thái da dạng, cũng như là đối tác tin cậy.</p>
                   </div>
                </div>
          </div>
          <div class="row row-small"  id="row-1707601186">
             @foreach ($servicehome as $service)
-            <div class="col medium-6 small-12 large-6"  >
+            <div class="col medium-4 small-12 large-4"  >
                <div class="col-inner"  >
                   <div class="banner has-hover hover12" id="banner-1246011188">
                   <div class="banner-inner fill">
@@ -74,9 +74,9 @@
                            </a>
                            <div id="text-box-879394954" class="text-box banner-layer x50 md-x50 lg-x50 y95 md-y95 lg-y95 res-text">
                               <div class="text dark">
-                              <div class="text-inner text-center">
-                                    <h2 style="text-align: center;text-transform:uppercase"><span style="font-size: 100%;">{{$service->name}}</span></h2>
-                              </div>
+                                 <div class="text-inner text-center">
+                                       <h2 style="text-align: center;text-transform:uppercase"><span>{{$service->name}}</span></h2>
+                                 </div>
                               </div>
                               <style scope="scope">
                               #text-box-879394954 {
@@ -84,6 +84,11 @@
                               }
                               #text-box-879394954 .text {
                               font-size: 100%;
+                              }
+                              @media only screen and (max-width: 768px) {
+                                 #text-box-879394954 .text {
+                                    font-size: 80%;
+                                 }
                               }
                               </style>
                            </div>
@@ -122,7 +127,7 @@
                      <div class="col small-12 large-12"  >
                            <div class="col-inner"  >
                               <h3 style="text-align: center;text-transform:uppercase"><span style="font-size: 160%;" data-line-height="m">Những dự án nổi bật</span></h3>
-                              <p style="text-align: center;">Công trình của công ty thực hiện trên khắp cả nước luôn là những công trình nổi bật, phức tạp, đòi hỏi công nghệ xây dựng cập nhật nhất hiện nay.</p>
+                              <p style="text-align: center;">Công ty hướng đến là một công ty hoạt động đa ngành nghề và chuyên sâu. Nhằm hướng đến phát triển một hệ sinh thái da dạng, cũng như là đối tác tin cậy.</p>
                            </div>
                      </div>
                      </div>
@@ -459,13 +464,12 @@
                </div>
                <div class="col medium-10 small-12 large-6"  >
                   <div class="col-inner" style="padding:30px 0px 0px 0px; text-align:justify;" >
-                     <h3 style="text-align: center;"><span style="font-size: 200%;">Hợp tác cùng <i style="color: #62a438; font-family: 'Russo One', sans-serif;position: relative;"><span style="color: #ec1d26">Dae</span>hee<span style="border: 2px solid #62a438;
-                        border-radius: 50%;
-                        font-size: 8px;
-                        padding: 0 6px;
+                     <h3 style="text-align: center;position: relative;"><span style="font-size: 200%;padding-right: 200px;">Hợp tác cùng </span>
+                        <img src="{{url('frontend/images/daehee-02.png')}}" alt="logo" style="width: 231px;
                         position: absolute;
-                        right: -26px;
-                        top: 0;">R</span></i> </span></h3>
+                        left: 280px;
+                        top: -13px;">
+                     </h3>
                      {!!$aboutUs->description!!}
                      <div id="gap-585892834" class="gap-element clearfix" style="display:block; height:auto;">
                      <style scope="scope">
@@ -753,13 +757,7 @@
          <div id="text-box-1670830949" class="text-box banner-layer x50 md-x50 lg-x50 y90 md-y90 lg-y90 res-text">
                <div class="text dark">
                   <div class="text-inner text-center">
-                     <h2 style="text-align: center;"><span style="font-size: 120%;"><strong>
-                        <i style="color: #62a438; font-family: 'Russo One', sans-serif;position: relative;"><span style="color: #ec1d26">Dae</span>hee<span style="border:2px solid #62a438; border-radius: 50% 40%;
-                        font-size: 9px;
-                        padding: 3px 4px;
-                        position: absolute;
-                        right: -30px;">R</span></i>
-                        </strong></span></h2>
+                     <img src="{{url('frontend/images/daehee-02.png')}}" alt="logo">
                      <p style="text-align: center;"><span style="font-size: 200%;"><strong>Xây dựng bằng lương tâm và tri thức</strong></span></p>
                   </div>
                </div>
