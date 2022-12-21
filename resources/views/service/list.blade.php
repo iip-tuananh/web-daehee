@@ -37,7 +37,7 @@
             >
             <div class="img has-hover x md-x lg-x y md-y lg-y" id="image_346565048">
                 <div class="img-inner dark" >
-                <img width="1440" height="410" src="https://deltagroup.vn/wp-content/uploads/2017/03/banner-qhdt.png" class="attachment-large size-large" alt="" loading="lazy" srcset="https://deltagroup.vn/wp-content/uploads/2017/03/banner-qhdt.png 1440w, https://deltagroup.vn/wp-content/uploads/2017/03/banner-qhdt-768x219.png 768w" sizes="(max-width: 1440px) 100vw, 1440px" />						
+                <img width="1440" height="410" src="{{url('frontend/images/bg-linhvuc.jpg')}}" class="attachment-large size-large" alt="" loading="lazy" srcset="{{url('frontend/images/bg-linhvuc.jpg')}} 1440w, {{url('frontend/images/bg-linhvuc.jpg')}} 768w" sizes="(max-width: 1440px) 100vw, 1440px" />						
                 </div>
                 <style scope="scope">
                 #image_346565048 {
