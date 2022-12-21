@@ -26,7 +26,7 @@ Liên hệ với chúng tôi
 		</div>
 		<style scope="scope">
 			#banner-1673961428 {
-			padding-top: 420px;
+			padding-top: 510px;
 			}
 			#banner-1673961428 .bg.bg-loaded {
 			background-image: url({{url('frontend/images/bg-contact.jpg')}});
