@@ -55,7 +55,7 @@
                <div class="col small-12 large-12"  >
                   <div class="col-inner"  >
                      <h3 style="text-align: center; text-transform:uppercase;"><span style="font-size: 160%;">Hệ sinh thái công ty Daehee Viet nam </span></h3>
-                     <p style="text-align: center;">Công ty hướng đến là một công ty hoạt động đa ngành nghề và chuyên sâu. Nhằm hướng đến phát triển một hệ sinh thái da dạng, cũng như là đối tác tin cậy.</p>
+                     <p style="text-align: center;">Là một công ty hoạt động đa ngành nghề, với hệ sinh thái đa dạng. Tập thể CBCNV Daehee Việt Nam luôn tâm huyết với nghề, dày dặn kinh nghiệm sẽ mang lại những công trình đạt chất lượng, tiến độ. Daehee Việt Nam hoạt động dựa trên phương châm"" Phát triển bằng Tâm và Tài"" sẽ là một đối tác tin cậy cho Quý công ty, Chủ đầu tư. Daehee Rất mong được hợp tác, đồng hành với Quý công ty, Chủ đầu tư. Hãy chọn lựa lĩnh vực hoạt động của Daehee Việt Nam mà Quý khách hàng , Chủ đầu tư đang quan tâm.</p>
                   </div>
                </div>
          </div>
