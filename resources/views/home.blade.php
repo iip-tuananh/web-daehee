@@ -760,7 +760,7 @@
                <div class="text dark">
                   <div class="text-inner text-center">
                      <img src="{{url('frontend/images/daehee-02.png')}}" alt="logo">
-                     <p style="text-align: center;"><span style="font-size: 200%;"><strong>Phát triển bằng tâm và trí</strong></span></p>
+                     <p style="text-align: center;"><span style="font-size: 200%;"><strong>Phát triển bằng Tâm và Tài</strong></span></p>
                   </div>
                </div>
                <style scope="scope">
