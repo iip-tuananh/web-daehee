@@ -116,287 +116,289 @@
          }
          </style>
       </section>
-      <section class="section has-parallax" id="section_675738257">
-         <div class="bg section-bg fill bg-fill  " data-parallax-container=".section" data-parallax-background data-parallax="-6">
-         </div>
-         <div class="section-content relative">
-         <div class="row"  id="row-803199395">
-               <div class="col small-12 large-12"  >
-                  <div class="col-inner"  >
-                     <div class="row"  id="row-816068474">
-                     <div class="col small-12 large-12"  >
-                           <div class="col-inner"  >
-                              <h3 style="text-align: center;text-transform:uppercase"><span style="font-size: 160%;" data-line-height="m">Những dự án nổi bật</span></h3>
-                              <p style="text-align: center;">Công ty hướng đến là một công ty hoạt động đa ngành nghề và chuyên sâu. Nhằm hướng đến phát triển một hệ sinh thái da dạng, cũng như là đối tác tin cậy.</p>
-                           </div>
-                     </div>
-                     </div>
-                     <div class="banner-grid-wrapper">
-                     <div id="banner-grid-238497033" class="banner-grid row row-grid row-small" data-packery-options="">
-                        @foreach ($homeProduct as $key=>$arr)
-                           @if ($key % 2 == 0)
-                           @foreach ($arr as $key=>$product)
-                           @php
-                              $img = json_decode($product['images']);
-                           @endphp
-                              @if ($key%2==0)
-                                 <div class="col grid-col large-8 grid-col-1-2" >
-                                    <div class="col-inner">
-                                       <div class="banner has-hover" id="banner-227730913">
-                                       <div class="banner-inner fill">
-                                             <div class="banner-bg fill" >
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                                <div class="is-border"
-                                                   style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
-                                                </div>
-                                             </div>
-                                             <div class="banner-layers container">
-                                                <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
-                                                   <div class="fill banner-link"></div>
-                                                </a>
-                                                <div id="text-box-689043007" class="text-box banner-layer x5 md-x0 lg-x0 y95 md-y95 lg-y95 res-text">
-                                                   <div class="text dark">
-                                                   <div class="text-inner text-center">
-                                                         <p><span style="font-size: 200%;">{{languageName($product['name'])}}</span></p>
+      @if (count($homeProduct) > 0)
+         <section class="section has-parallax" id="section_675738257">
+            <div class="bg section-bg fill bg-fill  " data-parallax-container=".section" data-parallax-background data-parallax="-6">
+            </div>
+            <div class="section-content relative">
+            <div class="row"  id="row-803199395">
+                  <div class="col small-12 large-12"  >
+                     <div class="col-inner"  >
+                        <div class="row"  id="row-816068474">
+                        <div class="col small-12 large-12"  >
+                              <div class="col-inner"  >
+                                 <h3 style="text-align: center;text-transform:uppercase"><span style="font-size: 160%;" data-line-height="m">Những dự án nổi bật</span></h3>
+                                 <p style="text-align: center;">Công ty hướng đến là một công ty hoạt động đa ngành nghề và chuyên sâu. Nhằm hướng đến phát triển một hệ sinh thái da dạng, cũng như là đối tác tin cậy.</p>
+                              </div>
+                        </div>
+                        </div>
+                        <div class="banner-grid-wrapper">
+                        <div id="banner-grid-238497033" class="banner-grid row row-grid row-small" data-packery-options="">
+                           @foreach ($homeProduct as $key=>$arr)
+                              @if ($key % 2 == 0)
+                              @foreach ($arr as $key=>$product)
+                              @php
+                                 $img = json_decode($product['images']);
+                              @endphp
+                                 @if ($key%2==0)
+                                    <div class="col grid-col large-8 grid-col-1-2" >
+                                       <div class="col-inner">
+                                          <div class="banner has-hover" id="banner-227730913">
+                                          <div class="banner-inner fill">
+                                                <div class="banner-bg fill" >
+                                                   <div class="bg fill bg-fill "></div>
+                                                   <div class="overlay"></div>
+                                                   <div class="is-border"
+                                                      style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
                                                    </div>
-                                                   </div>
-                                                   <style scope="scope">
-                                                   #text-box-689043007 {
-                                                   width: 88%;
-                                                   }
-                                                   #text-box-689043007 .text {
-                                                   font-size: 100%;
-                                                   }
-                                                   @media (min-width:550px) {
-                                                   #text-box-689043007 {
-                                                   width: 44%;
-                                                   }
-                                                   }
-                                                   </style>
                                                 </div>
-                                             </div>
-                                       </div>
-                                       <style scope="scope">
-                                             #banner-227730913 {
-                                             padding-top: 500px;
-                                             }
-                                             #banner-227730913 .bg.bg-loaded {
-                                             background-image: url({{$img[0]}});
-                                             }
-                                             #banner-227730913 .overlay {
-                                             background-color: rgba(0, 0, 0, 0.34);
-                                             }
-                                             #banner-227730913 .bg {
-                                             background-position: 36% 26%;
-                                             }
-                                       </style>
+                                                <div class="banner-layers container">
+                                                   <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
+                                                      <div class="fill banner-link"></div>
+                                                   </a>
+                                                   <div id="text-box-689043007" class="text-box banner-layer x5 md-x0 lg-x0 y95 md-y95 lg-y95 res-text">
+                                                      <div class="text dark">
+                                                      <div class="text-inner text-center">
+                                                            <p><span style="font-size: 200%;">{{languageName($product['name'])}}</span></p>
+                                                      </div>
+                                                      </div>
+                                                      <style scope="scope">
+                                                      #text-box-689043007 {
+                                                      width: 88%;
+                                                      }
+                                                      #text-box-689043007 .text {
+                                                      font-size: 100%;
+                                                      }
+                                                      @media (min-width:550px) {
+                                                      #text-box-689043007 {
+                                                      width: 44%;
+                                                      }
+                                                      }
+                                                      </style>
+                                                   </div>
+                                                </div>
+                                          </div>
+                                          <style scope="scope">
+                                                #banner-227730913 {
+                                                padding-top: 500px;
+                                                }
+                                                #banner-227730913 .bg.bg-loaded {
+                                                background-image: url({{$img[0]}});
+                                                }
+                                                #banner-227730913 .overlay {
+                                                background-color: rgba(0, 0, 0, 0.34);
+                                                }
+                                                #banner-227730913 .bg {
+                                                background-position: 36% 26%;
+                                                }
+                                          </style>
+                                          </div>
                                        </div>
                                     </div>
-                                 </div>
+                                 @else
+                                    <div class="col grid-col large-4 grid-col-1-2" >
+                                       <div class="col-inner">
+                                          <div class="banner has-hover" id="banner-1901663180">
+                                          <div class="banner-inner fill">
+                                                <div class="banner-bg fill" >
+                                                   <div class="bg fill bg-fill "></div>
+                                                   <div class="overlay"></div>
+                                                   <div class="is-border"
+                                                      style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
+                                                   </div>
+                                                </div>
+                                                <div class="banner-layers container">
+                                                   <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
+                                                      <div class="fill banner-link"></div>
+                                                   </a>
+                                                   <div id="text-box-1915615124" class="text-box banner-layer x5 md-x5 lg-x5 y95 md-y95 lg-y95 res-text">
+                                                      <div class="text dark">
+                                                      <div class="text-inner text-center">
+                                                            <p><span style="font-size: 200%;">{{languageName($product['name'])}} </span></p>
+                                                      </div>
+                                                      </div>
+                                                      <style scope="scope">
+                                                      #text-box-1915615124 {
+                                                      width: 90%;
+                                                      }
+                                                      #text-box-1915615124 .text {
+                                                      font-size: 100%;
+                                                      }
+                                                      @media (min-width:550px) {
+                                                      #text-box-1915615124 {
+                                                      width: 60%;
+                                                      }
+                                                      }
+                                                      </style>
+                                                   </div>
+                                                </div>
+                                          </div>
+                                          <style scope="scope">
+                                                #banner-1901663180 {
+                                                padding-top: 500px;
+                                                }
+                                                #banner-1901663180 .bg.bg-loaded {
+                                                background-image: url({{$img[0]}});
+                                                }
+                                                #banner-1901663180 .overlay {
+                                                background-color: rgba(0, 0, 0, 0.34);
+                                                }
+                                                #banner-1901663180 .bg {
+                                                background-position: 15% 0%;
+                                                }
+                                          </style>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 @endif
+                              @endforeach
                               @else
-                                 <div class="col grid-col large-4 grid-col-1-2" >
-                                    <div class="col-inner">
-                                       <div class="banner has-hover" id="banner-1901663180">
-                                       <div class="banner-inner fill">
-                                             <div class="banner-bg fill" >
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                                <div class="is-border"
-                                                   style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
-                                                </div>
-                                             </div>
-                                             <div class="banner-layers container">
-                                                <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
-                                                   <div class="fill banner-link"></div>
-                                                </a>
-                                                <div id="text-box-1915615124" class="text-box banner-layer x5 md-x5 lg-x5 y95 md-y95 lg-y95 res-text">
-                                                   <div class="text dark">
-                                                   <div class="text-inner text-center">
-                                                         <p><span style="font-size: 200%;">{{languageName($product['name'])}} </span></p>
+                              @foreach ($arr as $key=>$product)
+                              @php
+                                 $img = json_decode($product['images']);
+                              @endphp
+                                 @if ($key%2==0)
+                                    <div class="col grid-col large-4 grid-col-1-2" >
+                                       <div class="col-inner">
+                                          <div class="banner has-hover" id="banner-1868809937">
+                                          <div class="banner-inner fill">
+                                                <div class="banner-bg fill" >
+                                                   <div class="bg fill bg-fill "></div>
+                                                   <div class="overlay"></div>
+                                                   <div class="is-border"
+                                                      style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
                                                    </div>
-                                                   </div>
-                                                   <style scope="scope">
-                                                   #text-box-1915615124 {
-                                                   width: 90%;
-                                                   }
-                                                   #text-box-1915615124 .text {
-                                                   font-size: 100%;
-                                                   }
-                                                   @media (min-width:550px) {
-                                                   #text-box-1915615124 {
-                                                   width: 60%;
-                                                   }
-                                                   }
-                                                   </style>
                                                 </div>
-                                             </div>
-                                       </div>
-                                       <style scope="scope">
-                                             #banner-1901663180 {
-                                             padding-top: 500px;
-                                             }
-                                             #banner-1901663180 .bg.bg-loaded {
-                                             background-image: url({{$img[0]}});
-                                             }
-                                             #banner-1901663180 .overlay {
-                                             background-color: rgba(0, 0, 0, 0.34);
-                                             }
-                                             #banner-1901663180 .bg {
-                                             background-position: 15% 0%;
-                                             }
-                                       </style>
+                                                <div class="banner-layers container">
+                                                   <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
+                                                      <div class="fill banner-link"></div>
+                                                   </a>
+                                                   <div id="text-box-1997359097" class="text-box banner-layer x0 md-x0 lg-x0 y95 md-y95 lg-y95 res-text">
+                                                      <div class="text dark">
+                                                      <div class="text-inner text-center">
+                                                            <p><span style="font-size: 200%;">{{languageName($product['name'])}}</span></p>
+                                                      </div>
+                                                      </div>
+                                                      <style scope="scope">
+                                                      #text-box-1997359097 {
+                                                      width: 90%;
+                                                      }
+                                                      #text-box-1997359097 .text {
+                                                      font-size: 100%;
+                                                      }
+                                                      @media (min-width:550px) {
+                                                      #text-box-1997359097 {
+                                                      width: 60%;
+                                                      }
+                                                      }
+                                                      </style>
+                                                   </div>
+                                                </div>
+                                          </div>
+                                          <style scope="scope">
+                                                #banner-1868809937 {
+                                                padding-top: 500px;
+                                                }
+                                                #banner-1868809937 .bg.bg-loaded {
+                                                background-image: url({{$img[0]}});
+                                                }
+                                                #banner-1868809937 .overlay {
+                                                background-color: rgba(0, 0, 0, 0.34);
+                                                }
+                                                #banner-1868809937 .bg {
+                                                background-position: 31% 31%;
+                                                }
+                                          </style>
+                                          </div>
                                        </div>
                                     </div>
-                                 </div>
+                                 @else
+                                    <div class="col grid-col large-8 grid-col-1-2" >
+                                       <div class="col-inner">
+                                          <div class="banner has-hover" id="banner-420440000">
+                                          <div class="banner-inner fill">
+                                                <div class="banner-bg fill" >
+                                                   <div class="bg fill bg-fill "></div>
+                                                   <div class="overlay"></div>
+                                                   <div class="is-border"
+                                                      style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
+                                                   </div>
+                                                </div>
+                                                <div class="banner-layers container">
+                                                   <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
+                                                      <div class="fill banner-link"></div>
+                                                   </a>
+                                                   <div id="text-box-1511554178" class="text-box banner-layer x0 md-x0 lg-x0 y95 md-y95 lg-y95 res-text">
+                                                      <div class="text dark">
+                                                      <div class="text-inner text-center">
+                                                            <p><span style="font-size: 200%;">{{languageName($product['name'])}}</span></p>
+                                                      </div>
+                                                      </div>
+                                                      <style scope="scope">
+                                                      #text-box-1511554178 {
+                                                      width: 60%;
+                                                      }
+                                                      #text-box-1511554178 .text {
+                                                      font-size: 100%;
+                                                      }
+                                                      @media (min-width:550px) {
+                                                      #text-box-1511554178 {
+                                                      width: 40%;
+                                                      }
+                                                      }
+                                                      </style>
+                                                   </div>
+                                                </div>
+                                          </div>
+                                          <style scope="scope">
+                                                #banner-420440000 {
+                                                padding-top: 500px;
+                                                }
+                                                #banner-420440000 .bg.bg-loaded {
+                                                background-image: url({{$img[0]}});
+                                                }
+                                                #banner-420440000 .overlay {
+                                                background-color: rgba(0, 0, 0, 0.34);
+                                                }
+                                                #banner-420440000 .bg {
+                                                background-position: 92% 57%;
+                                                }
+                                          </style>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 @endif
+                              @endforeach
                               @endif
                            @endforeach
-                           @else
-                           @foreach ($arr as $key=>$product)
-                           @php
-                              $img = json_decode($product['images']);
-                           @endphp
-                              @if ($key%2==0)
-                                 <div class="col grid-col large-4 grid-col-1-2" >
-                                    <div class="col-inner">
-                                       <div class="banner has-hover" id="banner-1868809937">
-                                       <div class="banner-inner fill">
-                                             <div class="banner-bg fill" >
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                                <div class="is-border"
-                                                   style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
-                                                </div>
-                                             </div>
-                                             <div class="banner-layers container">
-                                                <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
-                                                   <div class="fill banner-link"></div>
-                                                </a>
-                                                <div id="text-box-1997359097" class="text-box banner-layer x0 md-x0 lg-x0 y95 md-y95 lg-y95 res-text">
-                                                   <div class="text dark">
-                                                   <div class="text-inner text-center">
-                                                         <p><span style="font-size: 200%;">{{languageName($product['name'])}}</span></p>
-                                                   </div>
-                                                   </div>
-                                                   <style scope="scope">
-                                                   #text-box-1997359097 {
-                                                   width: 90%;
-                                                   }
-                                                   #text-box-1997359097 .text {
-                                                   font-size: 100%;
-                                                   }
-                                                   @media (min-width:550px) {
-                                                   #text-box-1997359097 {
-                                                   width: 60%;
-                                                   }
-                                                   }
-                                                   </style>
-                                                </div>
-                                             </div>
-                                       </div>
-                                       <style scope="scope">
-                                             #banner-1868809937 {
-                                             padding-top: 500px;
-                                             }
-                                             #banner-1868809937 .bg.bg-loaded {
-                                             background-image: url({{$img[0]}});
-                                             }
-                                             #banner-1868809937 .overlay {
-                                             background-color: rgba(0, 0, 0, 0.34);
-                                             }
-                                             #banner-1868809937 .bg {
-                                             background-position: 31% 31%;
-                                             }
-                                       </style>
-                                       </div>
-                                    </div>
-                                 </div>
-                              @else
-                                 <div class="col grid-col large-8 grid-col-1-2" >
-                                    <div class="col-inner">
-                                       <div class="banner has-hover" id="banner-420440000">
-                                       <div class="banner-inner fill">
-                                             <div class="banner-bg fill" >
-                                                <div class="bg fill bg-fill "></div>
-                                                <div class="overlay"></div>
-                                                <div class="is-border"
-                                                   style="border-width:3px 3px 3px 3px;margin:12px 12px 12px 12px;">
-                                                </div>
-                                             </div>
-                                             <div class="banner-layers container">
-                                                <a class="fill" href="{{route('detailProduct', ['cate'=>$product['cate_slug'], 'slug'=>$product['slug']])}}"  >
-                                                   <div class="fill banner-link"></div>
-                                                </a>
-                                                <div id="text-box-1511554178" class="text-box banner-layer x0 md-x0 lg-x0 y95 md-y95 lg-y95 res-text">
-                                                   <div class="text dark">
-                                                   <div class="text-inner text-center">
-                                                         <p><span style="font-size: 200%;">{{languageName($product['name'])}}</span></p>
-                                                   </div>
-                                                   </div>
-                                                   <style scope="scope">
-                                                   #text-box-1511554178 {
-                                                   width: 60%;
-                                                   }
-                                                   #text-box-1511554178 .text {
-                                                   font-size: 100%;
-                                                   }
-                                                   @media (min-width:550px) {
-                                                   #text-box-1511554178 {
-                                                   width: 40%;
-                                                   }
-                                                   }
-                                                   </style>
-                                                </div>
-                                             </div>
-                                       </div>
-                                       <style scope="scope">
-                                             #banner-420440000 {
-                                             padding-top: 500px;
-                                             }
-                                             #banner-420440000 .bg.bg-loaded {
-                                             background-image: url({{$img[0]}});
-                                             }
-                                             #banner-420440000 .overlay {
-                                             background-color: rgba(0, 0, 0, 0.34);
-                                             }
-                                             #banner-420440000 .bg {
-                                             background-position: 92% 57%;
-                                             }
-                                       </style>
-                                       </div>
-                                    </div>
-                                 </div>
-                              @endif
-                           @endforeach
-                           @endif
-                        @endforeach
-                     </div>
-                     <style scope="scope">
-                           #banner-grid-238497033 .grid-col-1{height: 600px}
-                           #banner-grid-238497033 .grid-col-1-2{height: 300px}
-                           #banner-grid-238497033 .grid-col-1-3{height:200px}
-                           #banner-grid-238497033 .grid-col-2-3{height: 400px}
-                           #banner-grid-238497033 .grid-col-1-4{height: 150px}
-                           #banner-grid-238497033 .grid-col-3-4{height: 450px}
-                     </style>
+                        </div>
+                        <style scope="scope">
+                              #banner-grid-238497033 .grid-col-1{height: 600px}
+                              #banner-grid-238497033 .grid-col-1-2{height: 300px}
+                              #banner-grid-238497033 .grid-col-1-3{height:200px}
+                              #banner-grid-238497033 .grid-col-2-3{height: 400px}
+                              #banner-grid-238497033 .grid-col-1-4{height: 150px}
+                              #banner-grid-238497033 .grid-col-3-4{height: 450px}
+                        </style>
+                        </div>
                      </div>
                   </div>
-               </div>
-         </div>
-         </div>
-         <style scope="scope">
-         #section_675738257 {
-         padding-top: 34px;
-         padding-bottom: 34px;
-         }
-         #section_675738257 .section-bg.bg-loaded {
-         background-image: url({{url('frontend/images/Capture6.png')}});
-         }
-         #section_675738257 .section-bg {
-         background-position: 41% 0%;
-         }
-         </style>
-      </section>
+            </div>
+            </div>
+            <style scope="scope">
+            #section_675738257 {
+            padding-top: 34px;
+            padding-bottom: 34px;
+            }
+            #section_675738257 .section-bg.bg-loaded {
+            background-image: url({{url('frontend/images/Capture6.png')}});
+            }
+            #section_675738257 .section-bg {
+            background-position: 41% 0%;
+            }
+            </style>
+         </section>
+      @endif
       <section class="section dark hide-for-small has-parallax" id="section_1516049535">
          <div class="bg section-bg fill bg-fill  " data-parallax-container=".section" data-parallax-background data-parallax="-6">
          <div class="section-bg-overlay absolute fill"></div>
