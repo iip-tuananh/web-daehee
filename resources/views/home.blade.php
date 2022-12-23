@@ -54,7 +54,7 @@
          <div class="row"  id="row-731532712">
                <div class="col small-12 large-12"  >
                   <div class="col-inner"  >
-                     <h3 style="text-align: center; text-transform:uppercase;"><span style="font-size: 160%;">Lĩnh vực hoạt động </span></h3>
+                     <h3 style="text-align: center; text-transform:uppercase;"><span style="font-size: 160%;">Hệ sinh thái công ty Daehee Viet nam </span></h3>
                      <p style="text-align: center;">Công ty hướng đến là một công ty hoạt động đa ngành nghề và chuyên sâu. Nhằm hướng đến phát triển một hệ sinh thái da dạng, cũng như là đối tác tin cậy.</p>
                   </div>
                </div>
