@@ -415,7 +415,7 @@
                <div class="col medium-10 small-12 large-6"  >
                   <div class="col-inner"  >
                      <div class="is-border"
-                     style="border-color:rgb(255, 255, 255);border-width:30px 0px 0px 30px;margin:-30px 30px 30px -30px;">
+                     style="border-color:rgb(255, 255, 255);border-width:30px 0px 0px 30px;">
                      </div>
                      <div class="banner has-hover" id="banner-1161536167">
                      <div class="banner-inner fill">
