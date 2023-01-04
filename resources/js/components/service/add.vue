@@ -16,7 +16,7 @@
               />
             </div>
             <div class="form-group">
-              <label>Link liên kết trang web</label>
+              <label>Link liên kết trang web (nếu có)</label>
               <vs-input
                 type="text"
                 size="default"
