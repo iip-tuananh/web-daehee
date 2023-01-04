@@ -34,7 +34,11 @@
                      <a href="{{route('listService')}}" class="nav-top-link">Lĩnh vực<i class="icon-angle-down" ></i></a>
                      <ul class="sub-menu nav-dropdown nav-dropdown-default">
                         @foreach ($servicehome as $service)
-                        <li id="menu-item-3084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></li>
+                        @if ($service->link != null)
+                           <li id="menu-item-3084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="javascript:void(0);" onclick="redirectLink('{{$service->link}}')">{{$service->name}}</a></li>
+                        @else
+                           <li id="menu-item-3084" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></li>
+                        @endif
                         @endforeach
                      </ul>
                   </li>
@@ -112,7 +116,11 @@
                <a href="{{route('listService')}}">Lĩnh vực</a>
                <ul class="sub-menu nav-sidebar-ul children">
                   @foreach ($servicehome as $service)
-                  <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></li>
+                  @if ($service->link != null)
+                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="javascript:void(0);" onclick="redirectLink('{{$service->link}}')">{{$service->name}}</a></li>
+                  @else
+                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-3084"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></li>
+                  @endif
                   @endforeach
                </ul>
             </li>

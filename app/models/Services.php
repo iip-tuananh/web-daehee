@@ -20,6 +20,7 @@ class Services extends Model
                 $query->content = json_encode($request->content);
                 $query->description = json_encode($request->description);
                 $query->status = $request->status;
+                $query->link = $request->link;
                 $query->image = $request->image;
                 $query->save();
             }else{
@@ -29,6 +30,7 @@ class Services extends Model
                 $query->content = json_encode($request->content);
                 $query->description = json_encode($request->description);
                 $query->status = $request->status;
+                $query->link = $request->link;
                 $query->image = $request->image;
                 $query->save();
             }
@@ -40,6 +42,7 @@ class Services extends Model
                 $query->content = json_encode($request->content);
                 $query->description = json_encode($request->description);
                 $query->status = $request->status;
+                $query->link = $request->link;
                 $query->image = $request->image;
                 $query->save();
             

@@ -16,6 +16,16 @@
               />
             </div>
             <div class="form-group">
+              <label>Link liên kết trang web</label>
+              <vs-input
+                type="text"
+                size="default"
+                placeholder="Link"
+                class="w-100"
+                v-model="objData.link"
+              />
+            </div>
+            <div class="form-group">
                 <label>Nội dung</label>
                 <TinyMce
                   v-model="objData.content[0].content"
@@ -109,6 +119,7 @@ export default {
           },
         ],
         status: 1,
+        link: "",
         image: ""
       },
     };
