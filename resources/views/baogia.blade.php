@@ -16,7 +16,7 @@
 					<img src="{{url('/frontend/images/daehee.png')}}" alt="" style="width:100%">
 				</div>
 				<div class="col-md-10">
-					Thông báo!<br>
+					Thông báo !!!<br>
 					Kính thưa Quý khách hàng, hiện tại website của chúng tôi đang trong quá trình nâng cấp, bảo trì.<br>
 					Ngày cập nhật dự kiến : 18/12/2022<br>
 					<br>
