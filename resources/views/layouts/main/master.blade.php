@@ -121,17 +121,6 @@
 
          <!-- Modal content -->
          <div class="modal-content">
-            {{-- <div class="modal-header">
-               <h3>Thông báo</h3>
-            </div>
-            <div class="modal-body">
-               <span>Bạn đang chuyển hướng tới trang web</span><br>
-               <span>Bạn có chắc chắn muốn chuyển hướng sang trang này không?</span>
-            </div>
-            <div class="modal-footer">
-               <button class="btn btn-success">Đồng ý</button>
-               <button class="btn btn-danger close">Bỏ qua</button>
-            </div> --}}
          </div>
       </div>
       <style>
@@ -199,20 +188,24 @@
          var btn = document.getElementById("myBtn");
 
          // Get the <span> element that closes the modal
-         function redirectLink(e) {
-            var url = e;
+         function redirectLink(e,n) {
+            var urlRedirect = e;
+            var url = n;
             modal.style.display = "block";
-            var html = `<div class="modal-header"><h3>Thông báo</h3></div><div class="modal-body"><span>Bạn đang chuyển hướng tới trang web <span style="color: #62a438">`+url+`</span></span><br><span>Bạn có chắc chắn muốn chuyển hướng sang trang này không?</span></div><div class="modal-footer"><button class="btn btn-success" onclick="redirectUrl('`+url+`')">Đồng ý</button><button class="btn btn-danger" onclick="closeModal()">Bỏ qua</button></div>`;
+            var html = `<div class="modal-header"><h3>Thông báo</h3></div><div class="modal-body"><span>Bạn đang chuyển hướng tới trang web <span style="color: #62a438">`+urlRedirect+`</span></span><br><span>Bạn có chắc chắn muốn chuyển hướng sang trang này không?</span></div><div class="modal-footer"><button class="btn btn-success" onclick="redirectUrl('`+urlRedirect+`')">Đồng ý</button><button class="btn btn-danger" onclick="closeModal('`+url+`')">Bỏ qua</button></div>`;
             $(".modal-content").html(html);
          }
          
          // When the user clicks on <span> (x), close the modal
-         function closeModal() {
+         function closeModal(e) {
+            var url = e;
             modal.style.display = "none";
+            window.location.href = url;
          }
 
          function redirectUrl(e) {
             var url = e;
+            modal.style.display = "none";
             window.location.href = url;
          }
 

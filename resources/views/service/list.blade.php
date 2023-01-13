@@ -68,7 +68,11 @@
         </div>
         <div class="col medium-9 small-12 large-9"  >
             <div class="col-inner"  >
+                @if ($service->link != null)
+                <h3 style="font-weight: 300; color: #173774; font-size: 2.1em;text-transform: capitalize;"><a href="javascript:void(0);" onclick="redirectLink('{{$service->link}}','{{route('serviceDetail', ['slug'=>$service->slug])}}')">{{$service->name}}</a></h3>
+                @else
                 <h3 style="font-weight: 300; color: #173774; font-size: 2.1em;text-transform: capitalize;"><a href="{{route('serviceDetail', ['slug'=>$service->slug])}}">{{$service->name}}</a></h3>
+                @endif
                 <p>{!!languageName($service->description)!!}</p>
             </div>
         </div>

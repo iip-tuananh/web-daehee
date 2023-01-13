@@ -69,9 +69,15 @@
                            <div class="bg fill bg-fill " style="background-image: url({{$service->image}});"></div>
                         </div>
                         <div class="banner-layers container">
-                           <a class="fill" href="{{route('serviceDetail', ['slug'=>$service->slug])}}"  >
-                              <div class="fill banner-link"></div>
-                           </a>
+                           @if ($service->link != null)
+                              <a class="fill" href="javascript:void(0);" onclick="redirectLink('{{$service->link}}','{{route('serviceDetail', ['slug'=>$service->slug])}}')" >
+                                 <div class="fill banner-link"></div>
+                              </a>
+                           @else
+                              <a class="fill" href="{{route('serviceDetail', ['slug'=>$service->slug])}}"  >
+                                 <div class="fill banner-link"></div>
+                              </a>
+                           @endif
                            <div id="text-box-879394954" class="text-box banner-layer x50 md-x50 lg-x50 y95 md-y95 lg-y95 res-text">
                               <div class="text dark">
                                  <div class="text-inner text-center">
